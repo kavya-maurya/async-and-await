@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\New folder\\async await\\async await.csproj",
+      "projectUniqueName": "F:\\Practice\\async await  (reverse 3)\\async await.csproj",
       "projectName": "async await",
-      "projectPath": "F:\\New folder\\async await\\async await.csproj",
+      "projectPath": "F:\\Practice\\async await  (reverse 3)\\async await.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "F:\\New folder\\async await\\obj\\",
+      "outputPath": "F:\\Practice\\async await  (reverse 3)\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
