@@ -17,13 +17,13 @@ class Program
 // ntfy 
 
 
-   public static async Task SendNtfyNotification (string title ,string message )
+   public static asyn Task SendNtfyNotification (string title ,string message )
     {
            
            using (var httpClient = new HttpClient())
          {
             var topic = "kavya269";
-            
+
             var url = $"https://ntfy.sh/{topic}" ;
 
            
