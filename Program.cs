@@ -17,7 +17,7 @@ class Program
 // ntfy 
 
 
-   public static asyn Task SendNtfyNotification (string title ,string message )
+   public static async Task SendNtfyNotification (string title ,string message )
     {
            
            using (var httpClient = new HttpClient())
