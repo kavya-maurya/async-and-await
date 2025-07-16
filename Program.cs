@@ -8,14 +8,10 @@ using System.IO;         // for making files
 
 class Program
 {
-
    // async and await - async marks a method as asynchronous, enabling the use of await     
    // while await pauses the execution of the method until the awaited asynchronous operation completes.
   
-  
-
 // ntfy 
-
 
    public static async Task SendNtfyNotification (string title ,string message )
     {
@@ -26,8 +22,6 @@ class Program
 
             var url = $"https://ntfy.sh/{topic}" ;
 
-           
-
             var content = new StringContent(message , Encoding.UTF8,"text/plain");
 
             try
@@ -36,7 +30,6 @@ class Program
 
                    var response = await httpClient.PostAsync(url, content);
                 response.EnsureSuccessStatusCode();
-
             }
             
          catch(Exception ex)
@@ -49,8 +42,6 @@ class Program
  
              static async Task Main()
     {
-           
-
          Console.Write("Enter your marks in english : ");
         int english = Convert.ToInt32(Console.ReadLine());
 
@@ -62,10 +53,7 @@ class Program
 
         int i= (math+science+english)/3;
       
-            Console.WriteLine($"your average score is {i}");
-
-
-            
+            Console.WriteLine($"your average score is {i}");    
                 if(  i >= 90)
                      {
                         Console.WriteLine(" your performance according to your average is ---->Excellent");
@@ -85,10 +73,7 @@ class Program
 
                      else 
                     {Console.WriteLine("your performance ---->poor");
-                    }
-
-
-               
+                    }        
 
 if (i>=60)
 {
@@ -106,34 +91,26 @@ if (i>=60)
 // through writeline it then prints the content it read on terminal
 
  string  filePath="result.pdf";
-          File.WriteAllText("result.pdf", $"your marks \n english {english} \n maths {math} \n science {science} \n congratulations you are passed with average of : {i}");
+          File.AppendAllText("result.pdf", $"your marks \n english {english} \n maths {math} \n science {science} \n congratulations you are passed with average of : {i}");
             string Content = File.ReadAllText(filePath);
         Console.WriteLine("File Content:\n" + Content);
 
-
 }
-
-                
-               else if(i<=60)
+ else if(i<=60)
         {
              Console.WriteLine("fail");
              await SendNtfyNotification("Result", $"you are failed , your average is {i}");
         Console.WriteLine("Notification sent.");
 
         string  filePath="result.pdf";
-          File.WriteAllText("result.pdf", $" your marks \n english {english} \n maths {math} \n science {science} \n failed with average of : {i}");
+          File.AppendAllText("result.pdf", $" your marks \n english {english} \n maths {math} \n science {science} \n failed with average of : {i}");
             string Content = File.ReadAllText(filePath);
         Console.WriteLine("File Content:\n" + Content);
 
-
         }
-
-
-   }
+   }      
         
-        
-        
-    }
+ }
 
 
 
