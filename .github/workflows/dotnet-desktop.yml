@@ -31,10 +31,10 @@ jobs:
     - name: Notify success via ntfy
       if: success()
       run: |
-        curl -d "✅ .NET build & run succeeded" https://ntfy.sh/kavya269
+        curl -d "✅ .NET build & run succeeded" https://ntfy.sh/kavyagitalert
 
     - name: Notify failure via ntfy
       if: failure()
       run: |
-        curl -d "❌ .NET build or run failed" https://ntfy.sh/kavya269
+        curl -d "❌ .NET build or run failed" https://ntfy.sh/kavyagitalert
         
